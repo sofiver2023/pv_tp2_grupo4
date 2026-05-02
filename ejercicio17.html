@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17</title>
+</head>
+<body>
+    <script>
+        const contarLetraA = (texto) => {
+        let contador = 0;
+        for (let i = 0; i < texto.length; i++) {
+            if (texto[i] === "a") {
+                contador++;
+            }
+        }
+        return contador;
+    };
+
+    let texto;
+
+    do {
+        texto = prompt("Ingrese un texto:");
+    } while (texto === null || texto.trim() === "");
+
+    const cantidad = contarLetraA(texto);
+
+    document.write(`<p>En el el texto "${texto}" la letra "a" aparece ${cantidad} veces.</p>`);
+    </script>
+</body>
+</html>
