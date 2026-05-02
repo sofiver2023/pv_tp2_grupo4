@@ -8,24 +8,33 @@
 <body>
     <h1>Mostrar Arreglo</h1>
 
-    <p>Ingrese cuántos números desea almacenar:</p>
-    <input type="number" id="cantidad" placeholder="Cantidad de números">
-    <br>
-    <br>
-    <button id="btnGenerar">Generar campos</button>
-    <br>
-    <br>
-    <div id="inputs"></div>
-    <br>
-    <br>
-    <button id="btnMostrar" style="display:none;">Mostrar Arreglo</button>
+    <script>
+        const mostrarArreglo = (arr) => {
+            for (let i = 0; i < arr.length; i++) {
+                document.write(`${arr[i]}<br>`);
+            }
+        }
 
-    <h3>Resultado:</h3>
-    <div id="resultado"></div>
+        let cantidad = parseInt(prompt("¿Cuántos números desea ingresar en el arreglo?"));
+        if (isNaN(cantidad) || cantidad <= 0) {
+        document.write(`Debe ingresar una cantidad válida.`);
+        } else {
+            let numeros = [];
 
-    <script src="script.js"></script>
-</body>
-<script type=module src="js/ejercicio13.js"></script>
+            for (let i = 0; i < cantidad; i++) {
+                let num = parseFloat(prompt(`Ingrese el número ${i + 1}:`));
+
+                if (isNaN(num)) {
+                document.write(`El valor ingresado no es válido.<br>`);
+                numeros.push(0);
+                } else {
+                numeros.push(num);
+                }
+            }
+
+            document.write(`Números ingresados:<br>`);
+            mostrarArreglo(numeros);
+        }
+    </script>
 </body>
 </html>
-

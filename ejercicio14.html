@@ -7,22 +7,38 @@
 </head>
 <body>
     <h1>Duplicar números</h1>
+    <script>
+        const duplicar = (arr) => {
+            let nuevoArreglo = [];
+            for (let i = 0; i < arr.length; i++) {
+                nuevoArreglo.push(arr[i] * 2);
+            }
+            return nuevoArreglo;
+        }
 
-    <p>Ingrese cuántos números desea almacenar:</p>
-    <input type="number" id="cantidad" placeholder="Cantidad de números">
-    <br>
-    <br>
-    <button id="btnGenerar">Generar campos</button>
-    <br>
-    <br>
-    <div id="inputs"></div>
-    <br>
-    <button id="btnDuplicar" style="display:none;">Duplicar</button>
+        let cantidad = parseInt(prompt("¿Cuántos números desea ingresar en el arreglo?"));
+        if (isNaN(cantidad) || cantidad <= 0) {
+            document.write(`Debe ingresar una cantidad válida.`);
+        } else {
+            let numeros = [];
 
-    <h3>Resultado:</h3>
-    <p id="resultado"></p>
+        for (let i = 0; i < cantidad; i++) {
+            let num = parseFloat(prompt(`Ingrese el número ${i + 1}:`));
+            if (isNaN(num)) {
+                document.write(`El valor ingresado no es válido.<br>`);
+                numeros.push(0);
+            } else {
+                numeros.push(num);
+            }
+        }
 
-    <script type=module src="js/ejercicio14.js"></script>
+        let duplicados = duplicar(numeros);
+
+        document.write(`Arreglo original: ${numeros.join(", ")} <br>`);
+        document.write(`Arreglo duplicado:${duplicados.join(", ")}`);
+        }
+    </script>
 </body>
 </html>
+
 

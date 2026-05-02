@@ -5,18 +5,21 @@
     <title>Ejercicio 11</title>
 </head>
 <body>
-    <h1>Consumo de combustible por kilómetro</h1>
-    <p>Ingrese el número de kilómetros recorridos</p>
-    <input type="number" id="num1" placeholder="Ingrese primer número">
 
-    <p>Ingrese el número de litros de combustible consumidos</p>
-    <input type="number" id="num2" placeholder="Ingrese segundo número">
+    <h1>Consumo de combustible</h1>
+    <script>
+        let km = parseFloat(prompt("Ingrese los kilómetros recorridos:"));
+        let litros = parseFloat(prompt("Ingrese los litros de combustible consumidos:"));
 
-    <br>
-    <br>
-    <button onclick="dividir()">Dividir</button>
-    <p id="resultado"></p>
+        if (isNaN(km) || isNaN(litros) || km <= 0) {
+            document.write(`Ingrese valores válidos.`);
+        } else {
+            let consumo = litros / km;
 
-    <script src="js/ejercicio11.js"></script>
+            document.write(`Total consumo de combustible por kilómetro: ${consumo.toFixed(2)}`);
+        }
+    </script>
+
 </body>
 </html>
+
