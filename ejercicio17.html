@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 17</title>
+    <link rel="stylesheet" href="./css/ejercicio21-a-25.css">
 </head>
+
 <body>
+    <div class="container">
+        <h1>Ejercicio 17</h1>
+    </div>
+    <div class="container">
+        <a href="./ejercicio9.html" class="btn-ejercicio">ejercicio 9</a>
+        <a href="./ejercicio10.html" class="btn-ejercicio">ejercicio 10</a>
+        <a href="./ejercicio11.html" class="btn-ejercicio">ejercicio 11</a>
+        <a href="./ejercicio12.html" class="btn-ejercicio">ejercicio 12</a>
+        <a href="./ejercicio13.html" class="btn-ejercicio">ejercicio 13</a>
+        <a href="./ejercicio14.html" class="btn-ejercicio">ejercicio 14</a>
+        <a href="./ejercicio15.html" class="btn-ejercicio">ejercicio 15</a>
+        <a href="./ejercicio16.html" class="btn-ejercicio">ejercicio 16</a>
+        <a href="./ejercicio17.html" class="btn-ejercicio">ejercicio 17</a>
+        <a href="./ejercicio18.html" class="btn-ejercicio">ejercicio 18</a>
+        <a href="./ejercicio19.html" class="btn-ejercicio">ejercicio 19</a>
+        <a href="./ejercicio20.html" class="btn-ejercicio">ejercicio 20</a>
+        <a href="./ejercicio21.html" class="btn-ejercicio">ejercicio 21</a>
+        <a href="./ejercicio22.html" class="btn-ejercicio">ejercicio 22</a>
+        <a href="./ejercicio23.html" class="btn-ejercicio">ejercicio 23</a>
+        <a href="./ejercicio24.html" class="btn-ejercicio">ejercicio 24</a>
+        <a href="./ejercicio25.html" class="btn-ejercicio">ejercicio 25</a>
+    </div>
     <script>
         const contarLetraA = (texto) => {
-        let contador = 0;
-        for (let i = 0; i < texto.length; i++) {
-            if (texto[i] === "a") {
-                contador++;
+            let contador = 0;
+            for (let i = 0; i < texto.length; i++) {
+                if (texto[i] === "a") {
+                    contador++;
+                }
             }
-        }
-        return contador;
-    };
+            return contador;
+        };
 
-    let texto;
+        let texto;
 
-    do {
-        texto = prompt("Ingrese un texto:");
-    } while (texto === null || texto.trim() === "");
+        do {
+            texto = prompt("Ingrese un texto:");
+        } while (texto === null || texto.trim() === "");
 
-    const cantidad = contarLetraA(texto);
+        const cantidad = contarLetraA(texto);
 
-    document.write(`<p>En el el texto "${texto}" la letra "a" aparece ${cantidad} veces.</p>`);
+        document.write(`<p>En el el texto "${texto}" la letra "a" aparece ${cantidad} veces.</p>`);
     </script>
 </body>
+
 </html>

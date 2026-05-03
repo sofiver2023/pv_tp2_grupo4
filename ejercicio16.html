@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 16</title>
+    <link rel="stylesheet" href="./css/ejercicio21-a-25.css">
 </head>
+
 <body>
+    <div class="container">
+        <h1>Ejercicio 16</h1>
+    </div>
+    <div class="container">
+        <a href="./ejercicio9.html" class="btn-ejercicio">ejercicio 9</a>
+        <a href="./ejercicio10.html" class="btn-ejercicio">ejercicio 10</a>
+        <a href="./ejercicio11.html" class="btn-ejercicio">ejercicio 11</a>
+        <a href="./ejercicio12.html" class="btn-ejercicio">ejercicio 12</a>
+        <a href="./ejercicio13.html" class="btn-ejercicio">ejercicio 13</a>
+        <a href="./ejercicio14.html" class="btn-ejercicio">ejercicio 14</a>
+        <a href="./ejercicio15.html" class="btn-ejercicio">ejercicio 15</a>
+        <a href="./ejercicio16.html" class="btn-ejercicio">ejercicio 16</a>
+        <a href="./ejercicio17.html" class="btn-ejercicio">ejercicio 17</a>
+        <a href="./ejercicio18.html" class="btn-ejercicio">ejercicio 18</a>
+        <a href="./ejercicio19.html" class="btn-ejercicio">ejercicio 19</a>
+        <a href="./ejercicio20.html" class="btn-ejercicio">ejercicio 20</a>
+        <a href="./ejercicio21.html" class="btn-ejercicio">ejercicio 21</a>
+        <a href="./ejercicio22.html" class="btn-ejercicio">ejercicio 22</a>
+        <a href="./ejercicio23.html" class="btn-ejercicio">ejercicio 23</a>
+        <a href="./ejercicio24.html" class="btn-ejercicio">ejercicio 24</a>
+        <a href="./ejercicio25.html" class="btn-ejercicio">ejercicio 25</a>
+    </div>
     <script>
-    const sumarRango = (numInicial, numFinal) => {
-        let suma = 0;
-        for (let i = numInicial; i <= numFinal; i++) {
-            suma += i;
-        }
-        return suma;
-    };
+        const sumarRango = (numInicial, numFinal) => {
+            let suma = 0;
+            for (let i = numInicial; i <= numFinal; i++) {
+                suma += i;
+            }
+            return suma;
+        };
 
-    let numInicial;
-    let numFinal;
+        let numInicial;
+        let numFinal;
 
-    do {
-        numInicial = Number(prompt("Ingrese el número inicial:"));
-        numFinal = Number(prompt("Ingrese el número final:"));
-        if (numInicial > numFinal) {
-            alert("El número inicial debe ser menor o igual que el número final.");
-        }
-    } while (numInicial > numFinal);
+        do {
+            numInicial = Number(prompt("Ingrese el número inicial:"));
+            numFinal = Number(prompt("Ingrese el número final:"));
+            if (numInicial > numFinal) {
+                alert("El número inicial debe ser menor o igual que el número final.");
+            }
+        } while (numInicial > numFinal);
 
-    const resultado = sumarRango(numInicial, numFinal);
+        const resultado = sumarRango(numInicial, numFinal);
 
-    document.write(`<p>La suma del rango entre ${numInicial} y ${numFinal} es: ${resultado}</p>`);
+        document.write(`<p>La suma del rango entre ${numInicial} y ${numFinal} es: ${resultado}</p>`);
     </script>
 </body>
+
 </html>
